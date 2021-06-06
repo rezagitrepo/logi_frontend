@@ -1,0 +1,36 @@
+.login-container {
+    /*background-color: rgb(86, 168, 235);*/
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    min-height: 100vh;
+    min-width: 100vw;
+    display:grid;
+    place-items: center;
+  }
+
+  .login-box {
+  
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    width: 400px;
+ 
+    text-align:left;
+    padding: 50px;
+    margin: 20px;
+  }
+
+label { display: table-cell; }
+
+
+input{ display: table-cell; }
+
+form { display: table;      }
+p{ display: table-row;  }
+
+.mv-right{ float: right; }
+
+ 
+
+
+
+
+  
+
