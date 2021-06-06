@@ -25,7 +25,15 @@ input{ display: table-cell; }
 form { display: table;      }
 p{ display: table-row;  }
 
-.mv-right{ float: right; }
+.mv-right{ float: right;text-align:right; 
+  display:table-row;
+  padding: 6px;
+  background:#610;
+  padding:10px;
+  width:100%;
+  text-align:right;
+
+}
 
  
 
