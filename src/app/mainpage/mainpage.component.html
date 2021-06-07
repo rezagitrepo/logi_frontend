@@ -8,13 +8,70 @@
 <div class="scrollmenu">
     <a href="#edit">EDIT</a>
     <a href="#mainpage">Service Provide Page</a>
-    <a href="addnote.html" class="right">Add Note</a>
-    <a href="contact.html" class="right">Contact</a>
     <a href="addcontact.html" class="right">Add Contact</a>
-        
-  </div>
-  <br>
-  <div class="login-box">
+    <a href="contact.html" class="right">Contact</a>
+    <a href="addnote.html" class="right">Add Note</a>
+    </div>
+  
+    <br>
+  
+    <div class="login-box">
         <h4>Service Provider Main Page</h4>
+    </div>
 
-  </div>
+    <form  #loginForm="ngForm">
+        <br>
+        <p>
+            <label>Account#:</label> <input type="text" name='accountNo' ngModel>
+        </p>
+        <p>
+            <label> Name:</label> <input type="text" name='name' ngModel>
+        </p>
+        <p>
+            <label> Address Line1:</label> <input type="text" name='addressLine1' ngModel>
+        </p>
+        <p>
+            <label> Address Line2:</label> <input type="text" name='addressLine2' ngModel>
+        </p>
+        <p>
+            <label> Address Line3:</label> <input type="text" name='addressLine3' ngModel>
+        </p>
+        <p>
+            <label> Country:</label> <input type="text" name='country' ngModel>
+        </p>
+        <p>
+            <label> City:</label> <input type="text" name='city' ngModel>
+            <label> </label><label> State:</label> <input type="text" name='state' ngModel>
+            <label> </label><label> Zip:</label> <input type="text" name='zip' ngModel>
+        </p>
+        <p>
+            <label> Phone:</label> <input type="text" name='phone' ngModel> 
+            <label> </label><label> Ext:</label> <input type="text" name='phoneExt' ngModel>
+        </p>
+        <p>
+            <label> Fax:</label> <input type="text" name='fax' ngModel>
+        </p>
+        <p>
+            <label> Toll Free:</label> <input type="text" name='tollfree' ngModel>
+        </p>
+        <p>
+            <label> Email:</label> <input type="text" name='email' ngModel>
+            <label> </label><label> Email</label> <input type="checkbox" name='isEmail' ngModel>
+            <label> Fax</label> <input type="checkbox" name='isFax' ngModel>
+        </p>
+        <p>
+            <label> TimeZone:</label> <input type="text" name='timeZone' ngModel>
+        </p>
+        <p>
+            <label> BusinessHour:</label> <input type="text" name='businessHour' ngModel>
+        </p>
+        <p>
+            <label> Active</label> <input type="checkbox" name='isActive' ngModel>
+            <label> RateSigned</label> <input type="checkbox" name='isRateSigned' ngModel>
+            <label> Primary</label> <input type="checkbox" name='isPrimary' ngModel>
+        </p>      
+    
+        
+    </form>
+
+

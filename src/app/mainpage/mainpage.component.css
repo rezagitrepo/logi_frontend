@@ -31,3 +31,11 @@ div.scrollmenu {
   .right {
     float:right;
   }
+
+  label { display: table-cell; }
+
+
+input{ display: table-cell; }
+
+form { display: table;      }
+p{ display: table-row;  }
