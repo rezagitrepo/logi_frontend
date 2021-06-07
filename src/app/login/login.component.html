@@ -7,7 +7,7 @@
 
 
 <div class="login-box">
-    <form  >
+    <form  #loginForm="ngForm" (ngSubmit)="onFormSubmit(loginForm)" >
         <!-- #loginForm="ngForm" (ngSubmit)="onFormSubmit(loginForm)" -->
         <h3>Log In</h3>
         <br>
@@ -22,6 +22,7 @@
         <br>
         <p> 
             <label></label><button type="submit" class="btn btn-primary float-right" >Log In</button>
+            <!-- routerLink="/mainpage" routerLinkActive="active" -->
         </p> 
 
         <p> 
