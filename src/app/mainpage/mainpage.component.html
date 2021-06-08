@@ -36,9 +36,17 @@
         <p>
             <label> Address Line3:</label> <input type="text" name='addressLine3' ngModel>
         </p>
-        <p>
-            <label> Country:</label> <input type="text" name='country' ngModel>
-        </p>
+        <!-- <p> -->
+            <label> Country:</label> 
+            <!-- <input type="text" name='country' ngModel> -->
+            <select formControlName="name">
+                <option disabled>Select Country</option>
+                <option>Choose Country Name</option>
+                <option *ngFor="let country of countries">{{country}}</option>
+            </select>
+        <!-- </p> -->
+
+        
         <p>
             <label> City:</label> <input type="text" name='city' ngModel>
             <label> State:</label> <input type="text" name='state' ngModel>
