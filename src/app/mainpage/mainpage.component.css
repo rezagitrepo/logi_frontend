@@ -32,10 +32,31 @@ div.scrollmenu {
     float:right;
   }
 
-  label { display: table-cell; }
+  label {     
+    /* border-spacing: 10px 10px;
+    border-collapse: separate;
+    padding-right: 60px; 
+    display: table-cell; */
+    /* padding-bottom: 20px; */
+    display: inline-block;
+        width: 120px;
+        margin-left:4em;
+        text-align: left;
+        
+  }
 
 
-input{ display: table-cell; }
+input{ 
+  /* border-spacing: 10px; 
+  border-collapse: separate;
+  padding-right: 60px;
+  display: table-cell;    */
+  /* padding-bottom: 20px; */
+  display: inline-block;
+        /* width: 150px; */
+        text-align: left;
+
+}
 
 form { display: table;      }
 p{ display: table-row;  }
