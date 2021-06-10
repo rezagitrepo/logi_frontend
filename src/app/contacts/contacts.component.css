@@ -1,0 +1,7 @@
+.contacts-container {
+    min-height: 50vh;
+    width: 20vw;
+    min-width: 200px;
+    background-color: rgb(209, 191, 87);
+    border-radius: 14px;
+}

@@ -1,0 +1,7 @@
+.provider-container {
+    min-height: 50vh;
+    width: 40vw;
+    min-width: 240px;
+    background-color: rgb(87, 136, 209);
+    border-radius: 14px;
+}
