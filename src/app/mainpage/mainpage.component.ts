@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mainpage',
@@ -9,7 +10,8 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class MainpageComponent implements OnInit {
 
-  constructor() { }
+  value = 'value'
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
