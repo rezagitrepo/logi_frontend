@@ -12,12 +12,21 @@ import { AuthService } from '../services/auth.service';
 export class MainpageComponent implements OnInit {
     currentUser: any;
     errorMessage: any;
+    prov_is_active: boolean = false;
+    prov_rate_signed: boolean = false;
+    prov_primary: boolean = false;
+
   value = 'value'
   constructor(private router: Router, private authServ: AuthService) { }
 
   ngOnInit(): void {
     this.authServ.getCurrentUser().subscribe(
-        (data) => this.currentUser = data,
+        (data) => {
+            this.currentUser = data;
+            this.prov_is_active = this.currentUser.provider[0].active;
+            this.prov_rate_signed = this.currentUser.provider[0].rate_signed;
+            this.prov_primary = this.currentUser.provider[0].primary;
+        },
         (error) => this.errorMessage = error
     )      
   }

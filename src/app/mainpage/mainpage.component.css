@@ -67,5 +67,15 @@ input{
 
 }
 
-form { display: table;      }
-p{ display: table-row;  }
+form { 
+    display: table; 
+    font-family: 'Karla', sans-serif;
+}
+
+p { 
+    display: table-row;  
+}
+
+label {
+    font-weight: bold;
+}

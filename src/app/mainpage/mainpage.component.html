@@ -4,40 +4,43 @@
     <br>
   
     <div class="login-box">
-        <h4>Service Provider Main Page</h4>
+        <h4>Service Provider</h4>
     </div>
 
     <form  #loginForm="ngForm">
         <br>
         <p>
-            <label>Account#:</label> {{value}}
+            <label> Name:</label> {{currentUser.provider[0].name}}
         </p>
         <p>
-            <label> Name:</label> {{value}}
+            <label> Address Line1:</label> {{currentUser.provider[0].address_line1}}
         </p>
         <p>
-            <label> Address Line1:</label> {{value}}
+            <label> Address Line2:</label> {{currentUser.provider[0].address_line2}}
         </p>
         <p>
-            <label> Address Line2:</label> {{value}}
+            <label> Address Line3:</label> {{currentUser.provider[0].address_line3}}
         </p>
         <p>
-            <label> Address Line3:</label> {{value}}
+            <label> Country:</label> {{currentUser.provider[0].country}}
         </p>
-        <!-- <p> -->
-            <label> Country:</label> 
-            <!-- <input type="text" name='country' ngModel> -->
+            <!-- <input type="text" name='country' ngModel> 
             <select formControlName="name">
                 <option disabled>Select Country</option>
                 <option>Choose Country Name</option>
                 <option *ngFor="let country of countries">{{country}}</option>
-            </select>
+            </select> 
+    -->
         <!-- </p> -->
 
         
         <p>
-            <label> City:</label> {{value}}
-            <label class="label2"> State:</label> {{value}}
+            <label> City:</label> {{currentUser.provider[0].city}}
+        </p>
+        <p>
+            <label class="label2"> State:</label> {{currentUser.provider[0].state}}
+        </p>
+        <p>
             <label class="label2"> Zip:</label> {{currentUser.provider[0].zip_code}}
         </p>
         <p>
@@ -52,18 +55,23 @@
         </p>
         <p>
             <label> Email:</label> {{currentUser.provider[0].email}}
-            <label class="label2"> Fax</label> {{currentUser.provider[0].fax}}
+        </p>
+        <p>
+            <label> Primary Contact:</label> {{currentUser.provider[0].primary_contact}}
         </p>
         <p>
             <label> TimeZone:</label> {{currentUser.provider[0].time_zone}}
         </p>
         <p>
-            <label> BusinessHour:</label> {{value}}
+            <label> Opening Time:</label> {{currentUser.provider[0].hour_start}}
         </p>
         <p>
-            <label class="label2"> Active</label> <input type="checkbox" name='isActive' ngModel>
-            <label class="label2"> RateSigned</label> <input type="checkbox" name='isRateSigned' ngModel>
-            <label class="label2"> Primary</label> <input type="checkbox" name='isPrimary' ngModel>
+            <label> Closing Time:</label> {{currentUser.provider[0].hour_end}}
+        </p>
+        <p>
+            <label class="label2"> Active</label> <input type="checkbox" onclick="return false;" name='isActive' [(ngModel)]="prov_is_active">
+            <label class="label2"> RateSigned</label> <input type="checkbox" onclick="return false;" name='isRateSigned'  [(ngModel)]="prov_rate_signed">
+            <label class="label2"> Primary</label> <input type="checkbox" onclick="return false;" name='isPrimary'  [(ngModel)]="prov_primary">
         </p>      
     
         
