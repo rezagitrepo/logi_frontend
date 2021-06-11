@@ -12,4 +12,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  notes: any = ['Add Note','Edit Note']
+
 }

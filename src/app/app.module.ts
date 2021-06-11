@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { AddnoteComponent } from './addnote/addnote.component';
 import { NotesComponent } from './notes/notes.component';
+import { AddcontactComponent } from './addcontact/addcontact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotesComponent } from './notes/notes.component';
     NavbarComponent,
     MainSectionComponent,
     AddnoteComponent,
-    NotesComponent
+    NotesComponent,
+    AddcontactComponent
   ],
   imports: [
     BrowserModule,
