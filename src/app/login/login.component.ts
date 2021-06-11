@@ -35,6 +35,11 @@ export class LoginComponent implements OnInit {
         this.AuthServ.login(this.login_credentials).subscribe(data => {
             console.log("data returned: " + data);
             this.currentUser = data;
+
+            console.log("CurrUser.email = " + this.currentUser.email);
+            console.log("CurrUser.login_id = " + this.currentUser.login_id);
+            console.log("CurrUser.contacts = " + this.currentUser.contacts);
+
             if (data) this.router.navigate( ['main-section']);
             else this.router.navigate( ['login']);
         });

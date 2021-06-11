@@ -25,15 +25,21 @@ export class AuthService {
   login(login_cred: Login): Observable<IUser[]> {
       let dataToSend = login_cred;
     //   console.log("request sent from Angular: " + JSON.stringify(dataToSend));
-        let response = this.http.post<IUser[]>(this.loginUrl, dataToSend)
+        this.currUser = this.http.post<IUser[]>(this.loginUrl, dataToSend)
         .pipe(catchError(this.errorHandler));
-        console.log(response);
+        console.log(this.currUser);
+
+
     //submit login post request
-    return response;
+    return this.currUser;
 
     //   this.isloggedIn=true;
     //   this.userName=username;
     //   return of(this.isloggedIn);
+  }
+
+  getCurrentUser(): Observable<IUser[]> {
+      return this.currUser;
   }
 
   logout() {
@@ -62,3 +68,46 @@ export class AuthService {
 
 
 }
+
+
+
+/*
+
+
+  _id: {type: mongoose.Types.ObjectId, auto: true},
+    login_id: String,
+    hashed_password: String,
+    email: String,
+    contacts: [{
+        title: String,
+        first_name: String,
+        last_name: String,
+        mobile_phone: String,
+        office_phone: String,
+        office_ext: String,
+        fax: String,
+        toll_free: String,
+        toll_free_ext: String,
+        email: String,
+    }],
+    notes: [{
+        time_stamp: String,
+        body: String,
+    }],
+    provider: [{
+        zip_code: String,
+        phone: String,
+        phone_ext: String,
+        fax: String,
+        toll_free: String,
+        email: String,
+        primary_contact: String,
+        time_zone: String,
+        hour_start: Number,
+        hour_end: Number,
+        active: Boolean,
+        rate_signed: Boolean,
+        primary: Boolean
+    }]
+
+    */

@@ -38,24 +38,24 @@
         <p>
             <label> City:</label> {{value}}
             <label class="label2"> State:</label> {{value}}
-            <label class="label2"> Zip:</label> {{value}}
+            <label class="label2"> Zip:</label> {{currentUser.provider[0].zip_code}}
         </p>
         <p>
-            <label> Phone:</label> {{value}} 
-            <label class="label2"> Ext:</label> {{value}}
+            <label> Phone:</label> {{currentUser.provider[0].phone}} 
+            <label class="label2"> Ext:</label> {{currentUser.provider[0].phone_ext}}
         </p>
         <p>
-            <label> Fax:</label> {{value}}
+            <label> Fax:</label> {{currentUser.provider[0].fax}}
         </p>
         <p>
-            <label> Toll Free:</label> {{value}}
+            <label> Toll Free:</label> {{currentUser.provider[0].toll_free}}
         </p>
         <p>
-            <label> Email:</label> {{value}}
-            <label class="label2"> Fax</label> {{value}}
+            <label> Email:</label> {{currentUser.provider[0].email}}
+            <label class="label2"> Fax</label> {{currentUser.provider[0].fax}}
         </p>
         <p>
-            <label> TimeZone:</label> {{value}}
+            <label> TimeZone:</label> {{currentUser.provider[0].time_zone}}
         </p>
         <p>
             <label> BusinessHour:</label> {{value}}

@@ -5,3 +5,4 @@ export default class UserModel {
     notes: any;
     provider: any;
 }
+
