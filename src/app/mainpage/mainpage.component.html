@@ -1,18 +1,6 @@
-<img src="assets/logo.jpg" alt="LOGI logo" >
-<!-- width="279" height="150" -->
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button routerLink="/edit" routerLinkActive="active">Home</button>
-    <button routerLink="/serviceprovider" routerLinkActive="active">Employees</button>
-</nav> -->
+<!-- <app-navbar></app-navbar> -->
 
-<div class="scrollmenu">
-    <a href="#edit">EDIT</a>
-    <a href="#mainpage">Service Provide Page</a>
-    <a href="addcontact.html" class="right">Add Contact</a>
-    <a href="contact.html" class="right">Contact</a>
-    <a href="addnote.html" class="right">Add Note</a>
-    </div>
-  
+
     <br>
   
     <div class="login-box">
@@ -22,19 +10,19 @@
     <form  #loginForm="ngForm">
         <br>
         <p>
-            <label>Account#:</label> <input type="text" name='accountNo' ngModel>
+            <label>Account#:</label> {{value}}
         </p>
         <p>
-            <label> Name:</label> <input type="text" name='name' ngModel>
+            <label> Name:</label> {{value}}
         </p>
         <p>
-            <label> Address Line1:</label> <input type="text" name='addressLine1' ngModel>
+            <label> Address Line1:</label> {{value}}
         </p>
         <p>
-            <label> Address Line2:</label> <input type="text" name='addressLine2' ngModel>
+            <label> Address Line2:</label> {{value}}
         </p>
         <p>
-            <label> Address Line3:</label> <input type="text" name='addressLine3' ngModel>
+            <label> Address Line3:</label> {{value}}
         </p>
         <!-- <p> -->
             <label> Country:</label> 
@@ -48,38 +36,38 @@
 
         
         <p>
-            <label> City:</label> <input type="text" name='city' ngModel>
-            <label> State:</label> <input type="text" name='state' ngModel>
-            <label> Zip:</label> <input type="text" name='zip' ngModel>
+            <label> City:</label> {{value}}
+            <label class="label2"> State:</label> {{value}}
+            <label class="label2"> Zip:</label> {{value}}
         </p>
         <p>
-            <label> Phone:</label> <input type="text" name='phone' ngModel> 
-            <label> Ext:</label> <input type="text" name='phoneExt' ngModel>
+            <label> Phone:</label> {{value}} 
+            <label class="label2"> Ext:</label> {{value}}
         </p>
         <p>
-            <label> Fax:</label> <input type="text" name='fax' ngModel>
+            <label> Fax:</label> {{value}}
         </p>
         <p>
-            <label> Toll Free:</label> <input type="text" name='tollfree' ngModel>
+            <label> Toll Free:</label> {{value}}
         </p>
         <p>
-            <label> Email:</label> <input type="text" name='email' ngModel>
-            <label>Email</label> <input type="checkbox" name='isEmail' ngModel>
-            <label> Fax</label> <input type="checkbox" name='isFax' ngModel>
+            <label> Email:</label> {{value}}
+            <label class="label2"> Fax</label> {{value}}
         </p>
         <p>
-            <label> TimeZone:</label> <input type="text" name='timeZone' ngModel>
+            <label> TimeZone:</label> {{value}}
         </p>
         <p>
-            <label> BusinessHour:</label> <input type="text" name='businessHour' ngModel>
+            <label> BusinessHour:</label> {{value}}
         </p>
         <p>
-            <label> Active</label> <input type="checkbox" name='isActive' ngModel>
-            <label> RateSigned</label> <input type="checkbox" name='isRateSigned' ngModel>
-            <label> Primary</label> <input type="checkbox" name='isPrimary' ngModel>
+            <label class="label2"> Active</label> <input type="checkbox" name='isActive' ngModel>
+            <label class="label2"> RateSigned</label> <input type="checkbox" name='isRateSigned' ngModel>
+            <label class="label2"> Primary</label> <input type="checkbox" name='isPrimary' ngModel>
         </p>      
     
         
     </form>
 
+    <router-outlet></router-outlet>
 

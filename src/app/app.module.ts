@@ -7,12 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MainSectionComponent } from './main-section/main-section.component';
+import { AddnoteComponent } from './addnote/addnote.component';
+import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainpageComponent
+    MainpageComponent,
+    ContactComponent,
+    NavbarComponent,
+    MainSectionComponent,
+    AddnoteComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,

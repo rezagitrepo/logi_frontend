@@ -21,7 +21,7 @@ div.scrollmenu {
   
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     /* width: 1280px; */
-    min-width: 100vw;
+    min-width: 20vw;
     max-height: 80px;
     text-align:left;
     padding: 10px;
@@ -40,6 +40,15 @@ div.scrollmenu {
     /* padding-bottom: 20px; */
     display: inline-block;
         width: 120px;
+        margin-left:4em;
+        text-align: left;
+        
+  }
+
+  .label2 {     
+    
+    display: inline-block;
+        width: 80px;
         margin-left:4em;
         text-align: left;
         

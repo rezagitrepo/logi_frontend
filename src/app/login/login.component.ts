@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   onFormSubmit(loginForm: any){
     
-      this.router.navigate( ['mainpage']);
+      this.router.navigate( ['main-section']);
   }
 
 }
