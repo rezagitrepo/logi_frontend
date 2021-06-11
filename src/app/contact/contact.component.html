@@ -1,44 +1,16 @@
 <!-- <app-navbar></app-navbar> -->
-
 <br>
 <div class="contacts-container"> 
-    <div class="login-box">
-        <h4>Contact Page</h4>
+    <div class="individual-contact" *ngFor="let c of contacts">
+        <p>
+            <label>Title:</label>{{c.title}}
+        </p>
+        <p>
+            {{c.first_name}}&nbsp;{{c.last_name}}
+        </p>
+      
     </div>
 
-    <form  #loginForm="ngForm">
-        <br>
-        <p>
-            <label>Title:</label> {{value}}
-        </p>
-        <p>
-            <label> First Name:</label> {{value}}
-        </p>
-        <p>
-            <label> Last Name:</label> {{value}}
-        </p>
-        <p>
-            <label> Mobile Number:</label> {{value}}
-        </p>
-        <p>
-            <label> Office Phone:</label> {{value}}
-            <label> Ext:</label> {{value}}
-        </p>
-        <p>
-            <label> Fax:</label> {{value}}
-        </p>        
-        <p>
-            <label> Toll Free:</label> {{value}}
-            <label> Ext:</label> {{value}}
-        </p>
-        <p>
-            <label> Email:</label> {{value}} 
-        </p>  
-        <p>
-            <input type="checkbox" name='isActive' ngModel> <label class="right"> Send Password Immidiately </label>
-        </p>  
-    
-        
-    </form>
+   
 </div>
 

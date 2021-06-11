@@ -5,6 +5,7 @@
     min-width: 200px;
     /* background-color: rgb(87, 209, 87); */
     border-radius: 14px;
+    font-family: 'Karla', sans-serif;
 }
 
 .login-box {
@@ -17,3 +18,11 @@
     padding: 10px;
     /* margin: 20px; */
   }
+  
+p { 
+    display: table-row;  
+}
+
+label {
+    font-weight: bold;
+}

@@ -16,6 +16,7 @@ import { AddnoteComponent } from './addnote/addnote.component';
 import { NotesComponent } from './notes/notes.component';
 
 import { AuthService } from './services/auth.service';
+import { AddContactComponent } from './add-contact/add-contact.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AuthService } from './services/auth.service';
     NavbarComponent,
     MainSectionComponent,
     AddnoteComponent,
-    NotesComponent
+    NotesComponent,
+    AddContactComponent
   ],
   imports: [
     BrowserModule,

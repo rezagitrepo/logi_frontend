@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-notes',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
+    currUser: any;
+    notes: any;
+    errorMessage: any;
 
-  constructor() { }
+  constructor(private authServ: AuthService) { }
 
   ngOnInit(): void {
-  }
+        this.authServ.getCurrentUser().subscribe(
+            (data) => {
+                this.currUser = data;
+                this.notes = this.currUser.notes;
+            },
+            (error) => this.errorMessage = error
+        )
+    }
 
 }

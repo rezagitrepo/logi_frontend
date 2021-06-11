@@ -1,13 +1,14 @@
 <br>
 <div class="notes-container">
     
-    <div class="login-box">
-        <h4>This is notes area</h4>
+    <div class="individual-note" *ngFor="let n of notes">
+        <p>
+            <label>Timestamp:</label>{{n.time_stamp}}
+        </p>
+        <p>
+            {{n.body}}
+        </p>
+        
     </div>
-    
-    <textarea id="w3review" name="w3review" rows="4" cols="33">
-        This is area for notes
-        </textarea>
-    
-    
+
 </div>

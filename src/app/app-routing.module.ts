@@ -1,5 +1,9 @@
+import { componentFactoryName } from '@angular/compiler';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { combineAll } from 'rxjs/operators';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import { AddnoteComponent } from './addnote/addnote.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { MainSectionComponent } from './main-section/main-section.component';
@@ -10,6 +14,8 @@ const routes: Routes = [
   { path: 'main-section', component: MainSectionComponent},
   { path: 'mainpage', component: MainpageComponent},
   { path: 'contact', component: ContactComponent},
+    {path: 'addcontact', component: AddContactComponent},
+    {path: 'addnote', component: AddnoteComponent },
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
