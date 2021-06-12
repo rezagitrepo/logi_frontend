@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-add-contact',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-contact.component.css']
 })
 export class AddContactComponent implements OnInit {
+    contactModel: any;
+    currentUser: any;
+    errorMessage: any;
 
-  constructor() { }
+  constructor(private authServ: AuthService) { }
 
   ngOnInit(): void {
+    this.authServ.getCurrentUser().subscribe(
+        (data) => {
+            this.currentUser = data;
+        },
+        (error) => this.errorMessage = error
+    )      
   }
 
 }

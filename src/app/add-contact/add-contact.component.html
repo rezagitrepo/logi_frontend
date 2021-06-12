@@ -1,1 +1,104 @@
-<p>add-contact works!</p>
+<div class="addcontact-container">
+
+    <mat-card class="add-employee-card">
+        <mat-card-header>
+          <mat-card-title><h1>Add A New Contact</h1></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+    <form>
+
+        <label>Title: </label>&nbsp;
+        <input type="radio" class="title-radiobutton" #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
+        <label>Mr.</label>&nbsp;
+
+        <input type="radio" class="title-radiobutton" #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
+        <label>Ms.</label>&nbsp;
+
+        <input type="radio" class="title-radiobutton" #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
+        <label>Mrs.</label>
+
+        <br />
+   
+        <label>First Name: </label>
+        <input type="text" #first_name="ngModel" name="first_name" required minlength="2" [(ngModel)]="contactModel.first_name" 
+                    [class.is-invalid]="first_name.invalid && first_name.touched" />
+                    <div *ngIf="first_name.touched && first_name.errors">
+                        <div class="alert alert-danger" *ngIf="first_name.errors.required">First Name is required</div>
+                        <div class="alert alert-danger" *ngIf="first_name.errors.minlength">First Name should be at least 2 characters long</div>
+                    </div>
+        <br />
+
+        <label>Last Name: </label>
+        <input type="text" #last_name="ngModel" name="last_name" required minlength="2" [(ngModel)]="contactModel.last_name" 
+                    [class.is-invalid]="last_name.invalid && last_name.touched" />
+                    <div *ngIf="last_name.touched && last_name.errors">
+                        <div class="alert alert-danger" *ngIf="last_name.errors.required">Last Name is required</div>
+                        <div class="alert alert-danger" *ngIf="last_name.errors.minlength">Last Name should be at least 2 characters long</div>
+                    </div>
+         <br />
+    
+    <label>Mobile Phone Number: </label>
+    <input type="text" required pattern="^[0-9]" #mobile_phone="ngModel" name="mobile_phone" length="10" [(ngModel)]="contactModel.mobile_phone"
+    [class.is-invalid]="mobile_phone.invalid && mobile_phone.touched" />
+    <div *ngIf="mobile_phone.touched && mobile_phone.errors">   
+        <div class="alert alert-danger" *ngIf="mobile_phone.errors.pattern">Mobile Number must be Numbers</div>      
+        <div class="alert alert-danger" *ngIf="mobile_phone.errors.length">Mobile Number must be 10 digits long</div> 
+    </div>
+         <br />
+
+        <label>Office Phone Number</label>
+        <input type="text" required pattern="^[0-9]" #office_phone="ngModel" name="office_phone" length="10" [(ngModel)]="contactModel.office_phone"
+        [class.is-invalid]="office_phone.invalid && office_phone.touched" />
+        <div *ngIf="office_phone.touched && office_phone.errors">   
+            <div class="alert alert-danger" *ngIf="office_phone.errors.pattern">Office Phone must be Numbers</div>      
+            <div class="alert alert-danger" *ngIf="office_phone.errors.length">Office Number must be 10 digits long</div> 
+        </div>
+        <br />
+
+        <label>office_ext</label>
+        <input type="text" pattern="^[0-9]" #office_ext="ngModel" name="office_ext" [(ngModel)]="contactModel.office_ext" />
+        <br />
+
+        <label>fax</label>
+        <input type="text" required pattern="^[0-9]" #fax="ngModel" name="fax" length="10" [(ngModel)]="contactModel.fax"
+        [class.is-invalid]="fax.invalid && fax.touched" />
+        <div *ngIf="fax.touched && fax.errors">
+            <div class="alert alert-danger" *ngIf="fax.errors.pattern">Fax must be Numbers</div>      
+            <div class="alert alert-danger" *ngIf="fax.errors.length">Fax must be 10 digits</div> 
+        </div>
+        <br />
+
+        <label>toll_free</label>
+        <input type="text" required pattern="^[0-9]" #toll_free="ngModel" name="toll_free" length="10" [(ngModel)]="contactModel.toll_free"
+        [class.is-invalid]="toll_free.invalid && toll_free.touched" />
+        <div *ngIf="toll_free.touched && toll_free.errors">
+            <div class="alert alert-danger" *ngIf="toll_free.errors.pattern">Salary must be Numbers</div>      
+            <div class="alert alert-danger" *ngIf="toll_free.errors.minlength">Toll Free Number must be 10 digits</div> 
+        </div>
+        <br />
+
+        <label>toll_free_ext</label>
+        <input type="text" pattern="^[0-9]" #toll_free_ext="ngModel" name="toll_free_ext" [(ngModel)]="contactModel.toll_free_ext" />
+        <br />
+
+        <label>email</label>
+        <input type="text" #email="ngModel" name="email" required minlength="3" [(ngModel)]="contactModel.email" 
+            [class.is-invalid]="email.invalid && email.touched" />
+            <div *ngIf="email.touched && email.errors">
+                <div class="alert alert-danger" *ngIf="email.errors.required">Email address is required</div>
+                <div class="alert alert-danger" *ngIf="email.errors.minlength">Email address should be at least 3 characters long</div>
+            </div>
+        <br />
+
+        <button>Submit</button>
+        <button>Back</button>
+
+        </form>
+
+    </mat-card-content>
+</mat-card>
+
+</div>
+
+

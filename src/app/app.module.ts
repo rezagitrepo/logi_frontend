@@ -17,6 +17,8 @@ import { NotesComponent } from './notes/notes.component';
 
 import { AuthService } from './services/auth.service';
 import { AddContactComponent } from './add-contact/add-contact.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { AddContactComponent } from './add-contact/add-contact.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatCardModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
