@@ -12,6 +12,7 @@ import IUser from '../interfaces/IUser'
   providedIn: 'root'
 })
 export class AuthService {
+    private baseUrl:string = "http://localhost:3000/api/users";
   private loginUrl:string = "http://localhost:3000/api/users/login";
    currUser: any;
     errorMessage: any;
@@ -40,6 +41,15 @@ export class AuthService {
 
   getCurrentUser(): Observable<IUser[]> {
       return this.currUser;
+  }
+
+  updateUser(updatedUser: any): Observable<IUser[]> {
+      let dataToSend = updatedUser;
+        this.currUser = this.http.put<IUser[]>(this.baseUrl + "/updateUser", dataToSend)
+        .pipe(catchError(this.errorHandler));
+        console.log(this.currUser);
+
+    return this.currUser;
   }
 
   logout() {
