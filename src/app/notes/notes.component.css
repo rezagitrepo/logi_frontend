@@ -2,13 +2,13 @@
 
     min-height: 50vh;
     width: 15vw;
-    min-width: 200px;
+    min-width: 100px;
     /* background-color: rgb(87, 209, 87); */
-    border-radius: 14px;
+    /* border-radius: 14px; */
     font-family: 'Karla', sans-serif;
 }
 
-.login-box {
+.header-box {
   
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     /* width: 1280px; */
