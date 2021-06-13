@@ -40,7 +40,7 @@ export class AddnoteComponent implements OnInit {
     console.log(this.noteModel);
 
     console.log("currentNoteList before adding: " + this.currentNoteList); 
-    this.currentNoteList += newNote;
+    this.currentNoteList +=("," + this.noteModel);
     console.log("currentNoteList after adding: " + this.currentNoteList);
 
     this.currentUser.notes = this.currentNoteList;

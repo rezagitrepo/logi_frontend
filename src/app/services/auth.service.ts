@@ -4,8 +4,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Login } from '../LoginModel';
-import UserModel from '../UserModel'
-import IUser from '../interfaces/IUser'
+import UserModel from '../UserModel';
+import { IUser, IContact, INote, IProvider } from '../interfaces/IUser';
 
 
 @Injectable({
@@ -45,7 +45,9 @@ export class AuthService {
 
   updateUser(updatedUser: any): Observable<IUser[]> {
       let dataToSend = updatedUser;
-        this.currUser = this.http.put<IUser[]>(this.baseUrl + "/updateUser", dataToSend)
+      let idForParam = updatedUser._id;
+      console.log("idForParam: " + idForParam);
+        this.currUser = this.http.put<IUser[]>(this.baseUrl + "/" + idForParam, dataToSend)
         .pipe(catchError(this.errorHandler));
         console.log(this.currUser);
 

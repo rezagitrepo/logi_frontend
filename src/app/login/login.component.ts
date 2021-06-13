@@ -1,7 +1,7 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
-import IUser from '../interfaces/IUser';
+import { IUser, IContact, INote, IProvider } from '../interfaces/IUser';
 import { Login } from '../LoginModel';
 import { AuthService } from '../services/auth.service';
 
