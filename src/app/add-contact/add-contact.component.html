@@ -1,1 +1,99 @@
-<p>add-contact works!</p>
+<div class="header-box">    
+    <h4>Add Contact</h4>
+</div>
+
+<form  [formGroup]="addcontactForm" #loginForm="ngForm" (ngSubmit)="onSubmit(addcontactForm)">
+    <br>
+    <!-- <p> -->
+        <label>Title:</label>
+
+    <!-- </p> -->
+        <select formControlName="titlename">
+            <option disabled>Select Title</option>
+            <option>Choose Title Name</option>
+            <option *ngFor="let title of titles">{{title}}</option>
+        </select> 
+        <br>
+    <!-- <p> -->
+        <label> First Name:</label>
+        <input type="text" [class.is-invalid]="FirstName.invalid && FirstName.touched"
+        formControlName="FirstName" class="form-control">
+            <div *ngIf="FirstName.errors && FirstName.touched">
+              <div class="alert alert-danger" *ngIf="FirstName.errors?.required">First Name is required</div>
+              <div class="alert alert-danger" *ngIf="FirstName.errors?.minlength">First Name must be at least 3 characters</div>
+            </div>
+    <!-- </p> -->
+    <!-- <p> -->
+        <label> Last Name:</label>
+        <input type="text" [class.is-invalid]="LastName.invalid && LastName.touched"
+        formControlName="LastName" class="form-control">
+            <div *ngIf="LastName.errors && LastName.touched">
+              <div class="alert alert-danger" *ngIf="LastName.errors?.required">Last Name is required</div>
+              <div class="alert alert-danger" *ngIf="LastName.errors?.minlength">Last Name must be at least 3 characters</div>
+            </div>
+    <!-- </p> -->
+    <!-- <p> -->
+        <label> Mobile Number:</label>
+        <input type="text" [class.is-invalid]="MobilePhone.invalid && MobilePhone.touched"
+        formControlName="MobilePhone" class="form-control">
+            <div *ngIf="MobilePhone.touched && MobilePhone.errors">
+              <div class="alert alert-danger" *ngIf="MobilePhone.errors.required">Salary is required</div>
+              <div class="alert alert-danger" *ngIf="MobilePhone.errors.pattern">Salary must be numbers</div>
+            </div>
+    <!-- </p> -->
+    <!-- <p> -->
+        <label> Office Phone:</label>
+        <input type="text" [class.is-invalid]="OfficePhone.invalid && OfficePhone.touched"
+        formControlName="OfficePhone" class="form-control">
+            <div *ngIf="OfficePhone.touched && OfficePhone.errors">
+              <div class="alert alert-danger" *ngIf="OfficePhone.errors.required">Salary is required</div>
+              <div class="alert alert-danger" *ngIf="OfficePhone.errors.pattern">Salary must be numbers</div>
+            </div>
+        <label> Ext:</label>
+        <input type="text" [class.is-invalid]="OfficeExt.invalid && OfficeExt.touched"
+        formControlName="OfficeExt" class="form-control">
+            <div *ngIf="OfficeExt.touched && OfficeExt.errors">
+              <div class="alert alert-danger" *ngIf="OfficeExt.errors.required">Salary is required</div>
+              <div class="alert alert-danger" *ngIf="OfficeExt.errors.pattern">Salary must be numbers</div>
+            </div>
+    <!-- </p> -->
+    <!-- <p> -->
+        <label> Fax:</label>
+        <input type="text" [class.is-invalid]="Fax.invalid && Fax.touched"
+        formControlName="Fax" class="form-control">
+            <div *ngIf="Fax.touched && Fax.errors">
+              <div class="alert alert-danger" *ngIf="Fax.errors.required">Salary is required</div>
+              <div class="alert alert-danger" *ngIf="Fax.errors.pattern">Salary must be numbers</div>
+            </div>
+    <!-- </p>         -->
+    <!-- <p> -->
+        <label> Toll Free:</label>
+        <input type="text" [class.is-invalid]="TollFree.invalid && TollFree.touched"
+        formControlName="TollFree" class="form-control">
+            <div *ngIf="TollFree.touched && TollFree.errors">
+              <div class="alert alert-danger" *ngIf="TollFree.errors.required">Salary is required</div>
+              <div class="alert alert-danger" *ngIf="TollFree.errors.pattern">Salary must be numbers</div>
+            </div>
+        <label> Ext:</label>
+        <input type="text" [class.is-invalid]="TollFreeExt.invalid && TollFreeExt.touched" 
+        formControlName="TollFreeExt" class="form-control">
+            <div *ngIf="TollFreeExt.touched && TollFreeExt.errors">
+              <div class="alert alert-danger" *ngIf="TollFreeExt.errors.required">Salary is required</div>
+              <div class="alert alert-danger" *ngIf="TollFreeExt.errors.pattern">Salary must be numbers</div>
+            </div>
+    <!-- </p> -->
+    <!-- <p> -->
+        <label> Email:</label>
+        <input type="text" [class.is-invalid]="Email.invalid && Email.touched"
+        formControlName="Email" class="form-control">
+            <div *ngIf="Email.touched && Email.errors">
+              <div class="alert alert-danger" *ngIf="Email.errors.required">Salary is required</div>
+              <div class="alert alert-danger" *ngIf="Email.errors.pattern">Salary must be numbers</div>
+            </div>
+    <!-- </p>   -->
+    <!-- <p> -->
+        <input type="checkbox" name='isActive' ngModel> <label class="right"> Send Password Immidiately </label>
+    <!-- </p>   -->
+
+    
+</form>

@@ -1,0 +1,11 @@
+.header-box {
+    
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    /* width: 1280px; */
+    min-width: 20vw;
+    max-height: 80px;
+    text-align:left;
+    padding: 10px;
+    /* margin: 20px; */
+
+}
