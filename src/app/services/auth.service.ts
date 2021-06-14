@@ -14,7 +14,7 @@ import { IUser, IContact, INote, IProvider } from '../interfaces/IUser';
 export class AuthService {
     private baseUrl:string = "http://localhost:3000/api/users";
   private loginUrl:string = "http://localhost:3000/api/users/login";
-   currUser: any;
+  private currUser: any;
     errorMessage: any;
   private isloggedIn: boolean;
   private userName:string | undefined;
