@@ -45,15 +45,17 @@ export class AuthService {
 
   login(login_cred: Login): Observable<IUser[]> {
       let dataToSend = login_cred;
-    //   console.log("request sent from Angular: " + JSON.stringify(dataToSend));
+      console.log("request sent from Angular: " + JSON.stringify(dataToSend));
         this.currUser = this.http.post<IUser[]>(this.loginUrl, dataToSend)
         .pipe(catchError(this.errorHandler));
         console.log(this.currUser);
 
-<<<<<<< HEAD
+
     if(this.currUser!==null) {this.isloggedIn=true}
-=======
->>>>>>> forgetpassword-functionality
+
+    
+
+
     //submit login post request
     return this.currUser;
 
