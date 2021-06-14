@@ -50,10 +50,7 @@ export class AuthService {
         .pipe(catchError(this.errorHandler));
         console.log(this.currUser);
 
-<<<<<<< HEAD
     if(this.currUser!==null) {this.isloggedIn=true}
-=======
->>>>>>> forgetpassword-functionality
     //submit login post request
     return this.currUser;
 

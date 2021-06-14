@@ -14,13 +14,6 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-<<<<<<< HEAD
-  { path: 'main-section', component: MainSectionComponent, canActivate: [CanActivateClassGuardGuard]},
-  { path: 'mainpage', component: MainpageComponent,canActivate: [CanActivateClassGuardGuard]},
-  { path: 'contact', component: ContactComponent,canActivate: [CanActivateClassGuardGuard]},
-    {path: 'addcontact', component: AddContactComponent,canActivate: [CanActivateClassGuardGuard]},
-    {path: 'addnote', component: AddnoteComponent,canActivate: [CanActivateClassGuardGuard] },
-=======
   { path: 'main-section', component: MainSectionComponent,canActivate: [CanActivateClassGuardGuard]},
   { path: 'mainpage', component: MainpageComponent,canActivate: [CanActivateClassGuardGuard]},
   { path: 'contact', component: ContactComponent,canActivate: [CanActivateClassGuardGuard]},
@@ -28,7 +21,6 @@ const routes: Routes = [
     {path: 'addnote', component: AddnoteComponent,canActivate: [CanActivateClassGuardGuard]},
     {path: 'lostpass', component: LostPasswordComponent },
     {path: 'resetpass', component: ResetPassComponent },
->>>>>>> forgetpassword-functionality
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
