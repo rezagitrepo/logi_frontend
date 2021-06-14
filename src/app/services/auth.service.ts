@@ -14,6 +14,8 @@ import { IUser, IContact, INote, IProvider } from '../interfaces/IUser';
 export class AuthService {
   private baseUrl:string = "http://localhost:3000/api/users";
   private loginUrl:string = "http://localhost:3000/api/users/login";
+  private lostpassUrl: string = "http://localhost:3000/api/users/lostpass";
+  private resetpassUrl: string = "http://localhost:3000/api/users/resetpass"
   private currUser: any;
   private errorMessage: any;
   private isloggedIn: boolean;
@@ -23,13 +25,30 @@ export class AuthService {
       this.isloggedIn=false;
   }
 
+  resetPass(user: any, pass: string): Observable<IUser[]> {
+    let dataToSend = {
+        "_id": user._id,
+        "hashed_password": pass
+    }
+    this.currUser = this.http.post(this.resetpassUrl, dataToSend)
+    .pipe(catchError(this.errorHandler));
+
+    return this.currUser;
+  }
+
+  submitRecoverPass(lostpass_credentials: any): Observable<IUser[]> {
+      let dataToSend = lostpass_credentials;
+      this.currUser = this.http.post(this.lostpassUrl, dataToSend)
+      .pipe(catchError(this.errorHandler));
+      return this.currUser;
+  }
+
   login(login_cred: Login): Observable<IUser[]> {
       let dataToSend = login_cred;
     //   console.log("request sent from Angular: " + JSON.stringify(dataToSend));
         this.currUser = this.http.post<IUser[]>(this.loginUrl, dataToSend)
         .pipe(catchError(this.errorHandler));
         console.log(this.currUser);
-
 
     //submit login post request
     return this.currUser;
