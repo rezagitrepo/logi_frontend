@@ -15,7 +15,6 @@ export class AuthService {
   private baseUrl:string = "http://localhost:3000/api/users";
   private loginUrl:string = "http://localhost:3000/api/users/login";
   private lostpassUrl: string = "http://localhost:3000/api/users/lostpass";
-  private resetpassUrl: string = "http://localhost:3000/api/users/resetpass"
   private currUser: any;
   private errorMessage: any;
   private isloggedIn: boolean;
@@ -23,17 +22,6 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
       this.isloggedIn=false;
-  }
-
-  resetPass(user: any, pass: string): Observable<IUser[]> {
-    let dataToSend = {
-        "_id": user._id,
-        "hashed_password": pass
-    }
-    this.currUser = this.http.post(this.resetpassUrl, dataToSend)
-    .pipe(catchError(this.errorHandler));
-
-    return this.currUser;
   }
 
   submitRecoverPass(lostpass_credentials: any): Observable<IUser[]> {

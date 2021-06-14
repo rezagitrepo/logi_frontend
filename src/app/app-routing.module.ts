@@ -10,7 +10,6 @@ import { LoginComponent } from './login/login.component';
 import { LostPasswordComponent } from './lost-password/lost-password.component';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
-import { ResetPassComponent } from './reset-pass/reset-pass.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},

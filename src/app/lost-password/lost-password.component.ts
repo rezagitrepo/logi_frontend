@@ -22,12 +22,18 @@ export class LostPasswordComponent implements OnInit {
         "email": this.email
     }
 
-    this.authServ.submitRecoverPass(lostpass_credentials).subscribe(data => {
-        console.log("data returned: " + data);
-        
-        if (data) this.router.navigate( ['resetpass']);
-        else this.router.navigate( ['login']);
-    });
+    this.authServ.submitRecoverPass(lostpass_credentials).subscribe(
+        (data) => {
+            console.log("data returned: " + data);
+            
+            alert("Email with password reset instructions sent!");
+            this.router.navigate( ['login']);
+        },
+        (error) => {
+            alert("Email does not exist with LOGI.");
+            this.router.navigate( ['lostpass']);
+        }
+    );
 
 
   }
