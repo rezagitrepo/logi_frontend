@@ -20,8 +20,6 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { LostPasswordComponent } from './lost-password/lost-password.component';
-import { ResetPassComponent } from './reset-pass/reset-pass.component';
-
 
 @NgModule({
   declarations: [
@@ -35,7 +33,6 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
     NotesComponent,
     AddContactComponent,
     LostPasswordComponent,
-    ResetPassComponent
   ],
   imports: [
     BrowserModule,
