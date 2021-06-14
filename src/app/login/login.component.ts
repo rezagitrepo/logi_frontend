@@ -33,14 +33,16 @@ export class LoginComponent implements OnInit {
         this.login_credentials.hashed_password = this.password;
         
         this.AuthServ.login(this.login_credentials).subscribe(
-          (data) => {
-            console.log("In login Data")
+
+        (data) => {
+
             console.log("data returned: " + data);
             this.currentUser = data;
 
             console.log("CurrUser.email = " + this.currentUser.email);
             console.log("CurrUser.login_id = " + this.currentUser.login_id);
             console.log("CurrUser.contacts = " + this.currentUser.contacts);
+
 
             this.router.navigate( ['main-section']);
             },
@@ -51,6 +53,7 @@ export class LoginComponent implements OnInit {
                           this.router.navigate( ['login']);
                         }
             
+
         );
 
 

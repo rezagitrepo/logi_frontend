@@ -6,16 +6,16 @@
         </mat-card-header>
         <mat-card-content>
 
-    <form>
+    <form #contactForm="ngForm" (ngSubmit)="submitNewContact(contactForm)">
 
         <label>Title: </label>&nbsp;
-        <input type="radio" class="title-radiobutton" #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
+        <input type="radio" class="title-radiobutton" value="Mr." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
         <label>Mr.</label>&nbsp;
 
-        <input type="radio" class="title-radiobutton" #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
+        <input type="radio" class="title-radiobutton" value="Ms." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
         <label>Ms.</label>&nbsp;
 
-        <input type="radio" class="title-radiobutton" #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
+        <input type="radio" class="title-radiobutton" value="Mrs." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
         <label>Mrs.</label>
 
         <br />
@@ -39,7 +39,7 @@
          <br />
     
     <label>Mobile Phone Number: </label>
-    <input type="text" required pattern="^[0-9]" #mobile_phone="ngModel" name="mobile_phone" length="10" [(ngModel)]="contactModel.mobile_phone"
+    <input type="text" required pattern="^[0-9]+$" #mobile_phone="ngModel" name="mobile_phone" length="10" [(ngModel)]="contactModel.mobile_phone"
     [class.is-invalid]="mobile_phone.invalid && mobile_phone.touched" />
     <div *ngIf="mobile_phone.touched && mobile_phone.errors">   
         <div class="alert alert-danger" *ngIf="mobile_phone.errors.pattern">Mobile Number must be Numbers</div>      
@@ -48,7 +48,7 @@
          <br />
 
         <label>Office Phone Number</label>
-        <input type="text" required pattern="^[0-9]" #office_phone="ngModel" name="office_phone" length="10" [(ngModel)]="contactModel.office_phone"
+        <input type="text" required pattern="^[0-9]+$" #office_phone="ngModel" name="office_phone" length="10" [(ngModel)]="contactModel.office_phone"
         [class.is-invalid]="office_phone.invalid && office_phone.touched" />
         <div *ngIf="office_phone.touched && office_phone.errors">   
             <div class="alert alert-danger" *ngIf="office_phone.errors.pattern">Office Phone must be Numbers</div>      
@@ -57,11 +57,11 @@
         <br />
 
         <label>office_ext</label>
-        <input type="text" pattern="^[0-9]" #office_ext="ngModel" name="office_ext" [(ngModel)]="contactModel.office_ext" />
+        <input type="text" pattern="^[0-9]+$" #office_ext="ngModel" name="office_ext" [(ngModel)]="contactModel.office_ext" />
         <br />
 
         <label>fax</label>
-        <input type="text" required pattern="^[0-9]" #fax="ngModel" name="fax" length="10" [(ngModel)]="contactModel.fax"
+        <input type="text" required pattern="^[0-9]+$" #fax="ngModel" name="fax" length="10" [(ngModel)]="contactModel.fax"
         [class.is-invalid]="fax.invalid && fax.touched" />
         <div *ngIf="fax.touched && fax.errors">
             <div class="alert alert-danger" *ngIf="fax.errors.pattern">Fax must be Numbers</div>      
@@ -70,7 +70,7 @@
         <br />
 
         <label>toll_free</label>
-        <input type="text" required pattern="^[0-9]" #toll_free="ngModel" name="toll_free" length="10" [(ngModel)]="contactModel.toll_free"
+        <input type="text" required pattern="^[0-9]+$" #toll_free="ngModel" name="toll_free" length="10" [(ngModel)]="contactModel.toll_free"
         [class.is-invalid]="toll_free.invalid && toll_free.touched" />
         <div *ngIf="toll_free.touched && toll_free.errors">
             <div class="alert alert-danger" *ngIf="toll_free.errors.pattern">Salary must be Numbers</div>      
@@ -79,7 +79,7 @@
         <br />
 
         <label>toll_free_ext</label>
-        <input type="text" pattern="^[0-9]" #toll_free_ext="ngModel" name="toll_free_ext" [(ngModel)]="contactModel.toll_free_ext" />
+        <input type="text" pattern="^[0-9]+$" #toll_free_ext="ngModel" name="toll_free_ext" [(ngModel)]="contactModel.toll_free_ext" />
         <br />
 
         <label>email</label>
@@ -92,7 +92,6 @@
         <br />
 
         <button>Submit</button>
-        <button>Back</button>
 
         </form>
 
