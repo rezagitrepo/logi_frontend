@@ -7,16 +7,28 @@ import { AddnoteComponent } from './addnote/addnote.component';
 import { CanActivateClassGuardGuard } from './can-activate-class-guard.guard';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { LostPasswordComponent } from './lost-password/lost-password.component';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { ResetPassComponent } from './reset-pass/reset-pass.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+<<<<<<< HEAD
   { path: 'main-section', component: MainSectionComponent, canActivate: [CanActivateClassGuardGuard]},
   { path: 'mainpage', component: MainpageComponent,canActivate: [CanActivateClassGuardGuard]},
   { path: 'contact', component: ContactComponent,canActivate: [CanActivateClassGuardGuard]},
     {path: 'addcontact', component: AddContactComponent,canActivate: [CanActivateClassGuardGuard]},
     {path: 'addnote', component: AddnoteComponent,canActivate: [CanActivateClassGuardGuard] },
+=======
+  { path: 'main-section', component: MainSectionComponent,canActivate: [CanActivateClassGuardGuard]},
+  { path: 'mainpage', component: MainpageComponent,canActivate: [CanActivateClassGuardGuard]},
+  { path: 'contact', component: ContactComponent,canActivate: [CanActivateClassGuardGuard]},
+    {path: 'addcontact', component: AddContactComponent,canActivate: [CanActivateClassGuardGuard]},
+    {path: 'addnote', component: AddnoteComponent,canActivate: [CanActivateClassGuardGuard]},
+    {path: 'lostpass', component: LostPasswordComponent },
+    {path: 'resetpass', component: ResetPassComponent },
+>>>>>>> forgetpassword-functionality
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
