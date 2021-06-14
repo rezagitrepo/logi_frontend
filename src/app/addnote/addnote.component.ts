@@ -74,6 +74,8 @@ export class AddnoteComponent implements OnInit {
     //     (error) => this.errorMessage = error;
     // )
 
+    
+
 
     this.router.navigate( ['main-section']);
   }

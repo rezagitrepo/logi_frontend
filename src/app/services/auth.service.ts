@@ -12,10 +12,10 @@ import { IUser, IContact, INote, IProvider } from '../interfaces/IUser';
   providedIn: 'root'
 })
 export class AuthService {
-    private baseUrl:string = "http://localhost:3000/api/users";
+  private baseUrl:string = "http://localhost:3000/api/users";
   private loginUrl:string = "http://localhost:3000/api/users/login";
   private currUser: any;
-    errorMessage: any;
+  private errorMessage: any;
   private isloggedIn: boolean;
   private userName:string | undefined;
 
@@ -49,7 +49,7 @@ export class AuthService {
       console.log("idForParam: " + idForParam);
         this.currUser = this.http.put<IUser[]>(this.baseUrl + "/" + idForParam, dataToSend)
         .pipe(catchError(this.errorHandler));
-        console.log(this.currUser);
+       // console.log(this.currUser);
 
     return this.currUser;
   }

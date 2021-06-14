@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class MainpageComponent implements OnInit {
     currentUser: any;
-    errorMessage: any;
+    private errorMessage: any;
     prov_is_active: boolean = false;
     prov_rate_signed: boolean = false;
     prov_primary: boolean = false;
