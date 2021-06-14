@@ -30,7 +30,7 @@ export class AuthService {
         .pipe(catchError(this.errorHandler));
         console.log(this.currUser);
 
-
+    if(this.currUser!==null) {this.isloggedIn=true}
     //submit login post request
     return this.currUser;
 
@@ -51,6 +51,7 @@ export class AuthService {
         .pipe(catchError(this.errorHandler));
        // console.log(this.currUser);
 
+    
     return this.currUser;
   }
 
