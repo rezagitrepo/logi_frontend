@@ -73,7 +73,7 @@
         <input type="text" required pattern="^[0-9]+$" #toll_free="ngModel" name="toll_free" length="10" [(ngModel)]="contactModel.toll_free"
         [class.is-invalid]="toll_free.invalid && toll_free.touched" />
         <div *ngIf="toll_free.touched && toll_free.errors">
-            <div class="alert alert-danger" *ngIf="toll_free.errors.pattern">Salary must be Numbers</div>      
+            <div class="alert alert-danger" *ngIf="toll_free.errors.pattern">Toll Free Number must be Numbers</div>      
             <div class="alert alert-danger" *ngIf="toll_free.errors.minlength">Toll Free Number must be 10 digits</div> 
         </div>
         <br />
@@ -91,7 +91,7 @@
             </div>
         <br />
 
-        <button>Submit</button>
+        <button [disabled]="contactForm.form.invalid">Submit</button>
 
         </form>
 

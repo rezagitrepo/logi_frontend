@@ -31,3 +31,11 @@ p {
 label {
     font-weight: bold;
 }
+
+.evenRow {
+    background-color: rgba(126, 126, 126, 0.2);
+}
+
+.oddRow {
+    background-color: rgba(39, 39, 39, 0.2);
+}

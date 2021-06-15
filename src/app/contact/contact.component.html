@@ -6,7 +6,8 @@
     </div>
     
     
-    <div class="individual-contact" *ngFor="let c of contacts">
+    <div class="individual-contact" *ngFor="let c of contacts; let i = index; let o = odd" 
+    [ngClass]="{'evenRow': !o, 'oddRow': o }" >
         <p>
             <label>Title:</label>{{c.title}} {{c.first_name}}&nbsp;{{c.last_name}}
         </p>
