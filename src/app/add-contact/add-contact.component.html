@@ -1,26 +1,35 @@
+
+<app-navbar></app-navbar>
+
+<div class="header-box">    
+    <h4>Add Contact</h4>
+</div>
+
 <div class="addcontact-container">
+
+    
 
     <mat-card class="add-contact-card">
         <mat-card-header>
-          <mat-card-title><h1>Add A New Contact</h1></mat-card-title>
+          <!-- <mat-card-title><h1>Add A New Contact</h1></mat-card-title> -->
         </mat-card-header>
         <mat-card-content>
 
     <form #contactForm="ngForm" (ngSubmit)="submitNewContact(contactForm)">
 
-        <label>Title: </label>&nbsp;
+        <label for="radio">Title: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" class="title-radiobutton" value="Mr." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
-        <label>Mr.</label>&nbsp;
+        <label for="radio">Mr.</label>
 
         <input type="radio" class="title-radiobutton" value="Ms." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
-        <label>Ms.</label>&nbsp;
+        <label for="radio">Ms.</label>
 
         <input type="radio" class="title-radiobutton" value="Mrs." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
-        <label>Mrs.</label>
+        <label for="radio">Mrs.</label>
 
         <br />
    
-        <label>First Name: </label>
+        <label for="others">First Name: </label>
         <input type="text" #first_name="ngModel" name="first_name" required minlength="2" [(ngModel)]="contactModel.first_name" 
                     [class.is-invalid]="first_name.invalid && first_name.touched" />
                     <div *ngIf="first_name.touched && first_name.errors">
@@ -29,7 +38,7 @@
                     </div>
         <br />
 
-        <label>Last Name: </label>
+        <label for="others">Last Name: </label>
         <input type="text" #last_name="ngModel" name="last_name" required minlength="2" [(ngModel)]="contactModel.last_name" 
                     [class.is-invalid]="last_name.invalid && last_name.touched" />
                     <div *ngIf="last_name.touched && last_name.errors">
@@ -38,7 +47,7 @@
                     </div>
          <br />
     
-    <label>Mobile Phone Number: </label>
+    <label for="others">Mobile Phone Number: </label>
     <input type="text" required pattern="^[0-9]+$" #mobile_phone="ngModel" name="mobile_phone" length="10" [(ngModel)]="contactModel.mobile_phone"
     [class.is-invalid]="mobile_phone.invalid && mobile_phone.touched" />
     <div *ngIf="mobile_phone.touched && mobile_phone.errors">   
@@ -47,7 +56,7 @@
     </div>
          <br />
 
-        <label>Office Phone Number</label>
+        <label for="others">Office Phone Number</label>
         <input type="text" required pattern="^[0-9]+$" #office_phone="ngModel" name="office_phone" length="10" [(ngModel)]="contactModel.office_phone"
         [class.is-invalid]="office_phone.invalid && office_phone.touched" />
         <div *ngIf="office_phone.touched && office_phone.errors">   
@@ -56,11 +65,11 @@
         </div>
         <br />
 
-        <label>office_ext</label>
+        <label for="others">office_ext</label>
         <input type="text" pattern="^[0-9]+$" #office_ext="ngModel" name="office_ext" [(ngModel)]="contactModel.office_ext" />
         <br />
 
-        <label>fax</label>
+        <label for="others">fax</label>
         <input type="text" required pattern="^[0-9]+$" #fax="ngModel" name="fax" length="10" [(ngModel)]="contactModel.fax"
         [class.is-invalid]="fax.invalid && fax.touched" />
         <div *ngIf="fax.touched && fax.errors">
@@ -69,7 +78,7 @@
         </div>
         <br />
 
-        <label>toll_free</label>
+        <label for="others">toll_free</label>
         <input type="text" required pattern="^[0-9]+$" #toll_free="ngModel" name="toll_free" length="10" [(ngModel)]="contactModel.toll_free"
         [class.is-invalid]="toll_free.invalid && toll_free.touched" />
         <div *ngIf="toll_free.touched && toll_free.errors">
@@ -78,11 +87,11 @@
         </div>
         <br />
 
-        <label>toll_free_ext</label>
+        <label for="others">toll_free_ext</label>
         <input type="text" pattern="^[0-9]+$" #toll_free_ext="ngModel" name="toll_free_ext" [(ngModel)]="contactModel.toll_free_ext" />
         <br />
 
-        <label>email</label>
+        <label for="others">email</label>
         <input type="text" #email="ngModel" name="email" required minlength="3" [(ngModel)]="contactModel.email" 
             [class.is-invalid]="email.invalid && email.touched" />
             <div *ngIf="email.touched && email.errors">
@@ -91,7 +100,8 @@
             </div>
         <br />
 
-        <button>Submit</button>
+        <button class="btn btn-primary float-left">Submit</button>
+        <button class="btn btn-primary float-left" routerLink="main-section" routerLinkActive="active">Back</button>
 
         </form>
 

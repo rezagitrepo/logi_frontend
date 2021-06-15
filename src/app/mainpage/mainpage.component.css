@@ -79,3 +79,7 @@ p {
 label {
     font-weight: bold;
 }
+
+.mainpage-container{
+  margin: 30px;
+}

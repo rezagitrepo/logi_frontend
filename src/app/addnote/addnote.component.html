@@ -1,7 +1,15 @@
+<app-navbar></app-navbar>
+
+<div class="header-box">    
+    <h4>Add A New Note</h4>
+</div>
+
+<div class="addcontact-container">
+
 <div class="addnote-container">
     <mat-card class="add-contact-card">
         <mat-card-header>
-          <mat-card-title><h1>Add A New Note</h1></mat-card-title>
+          <!-- <mat-card-title><h1>Add A New Note</h1></mat-card-title> -->
         </mat-card-header>
         <mat-card-content>
 
@@ -16,7 +24,8 @@
                     </div>
         <br />
 
-        <button>Submit</button>
+        <button class="btn btn-primary float-left">Submit</button>
+        <button class="btn btn-primary float-left" routerLink="main-section" routerLinkActive="active">Back</button>
 
         </form>
 

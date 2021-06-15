@@ -19,7 +19,7 @@ const routes: Routes = [
     {path: 'addcontact', component: AddContactComponent,canActivate: [CanActivateClassGuardGuard]},
     {path: 'addnote', component: AddnoteComponent,canActivate: [CanActivateClassGuardGuard]},
     {path: 'lostpass', component: LostPasswordComponent },
-    {path: 'resetpass', component: ResetPassComponent },
+    //{path: 'resetpass', component: ResetPassComponent },
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
