@@ -17,9 +17,9 @@
 
     <form #contactForm="ngForm" (ngSubmit)="submitNewContact(contactForm)">
 
-        <label for="radio">Title: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="others">Title: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" class="title-radiobutton" value="Mr." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
-        <label for="radio">Mr.</label>
+        <label >Mr.</label>
 
         <input type="radio" class="title-radiobutton" value="Ms." #title="ngModel" name="title" required mdbInput [(ngModel)]="contactModel.title" >
         <label for="radio">Ms.</label>

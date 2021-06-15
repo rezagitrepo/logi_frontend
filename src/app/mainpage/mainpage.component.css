@@ -81,5 +81,12 @@ label {
 }
 
 .mainpage-container{
-  margin: 30px;
+  min-height: 50vh;
+    width: 35vw;
+    min-width: 300px;
+    /* background-color: rgb(209, 191, 87); */
+    border-radius: 3px;
+    /* margin: 2px;*/
+  
+  /* margin: 30px; */
 }

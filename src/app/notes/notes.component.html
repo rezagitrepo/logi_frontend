@@ -7,7 +7,7 @@
     <div class="individual-note" *ngFor="let n of notes; let i = index; let o = odd" 
     [ngClass]="{'evenRow': !o, 'oddRow': o }" >
         <p>
-            <label>Timestamp:</label>{{n.time_stamp}}
+            <label>Noted At:</label>{{n.time_stamp}}
         </p>
         <p>
             {{n.body}}

@@ -1,12 +1,12 @@
 .notes-container {
 
     min-height: 50vh;
-    width: 15vw;
+    width: 25vw;
     min-width: 100px;
     /* background-color: rgb(87, 209, 87); */
-    /* border-radius: 14px; */
+    border-radius: 3px;
     font-family: 'Karla', sans-serif;
-    margin: 30px;
+    /* margin: 2px; */
 }
 
 .header-box {

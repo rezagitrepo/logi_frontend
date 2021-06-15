@@ -4,9 +4,9 @@
     width: 20vw;
     min-width: 300px;
     /* background-color: rgb(209, 191, 87); */
-    border-radius: 14px;
-    margin: 30px;
-}
+    border-radius: 3px;
+    /* margin: 2px;*/
+} 
 
 .header-box {
     
