@@ -100,9 +100,9 @@
             </div>
         <br />
 
-        <button class="btn btn-primary float-left">Submit</button>
+        <button [disabled]="contactForm.form.invalid" class="btn btn-primary float-left">Submit</button>
         <button class="btn btn-primary float-left" routerLink="main-section" routerLinkActive="active">Back</button>
-        <button [disabled]="contactForm.form.invalid">Submit</button>
+        <!-- <button [disabled]="contactForm.form.invalid">Submit</button> -->
 
         </form>
 
