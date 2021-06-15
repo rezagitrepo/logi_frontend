@@ -27,3 +27,12 @@ p {
 label {
     font-weight: bold;
 }
+
+
+.evenRow {
+    background-color: rgba(187, 187, 187, 0.2);
+}
+
+.oddRow {
+    background-color: rgba(39, 39, 39, 0.2);
+}
