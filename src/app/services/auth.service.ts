@@ -84,6 +84,10 @@ export class AuthService {
         this.currUser = this.http.put<IUser[]>(this.baseUrl + "/" + idForParam, dataToSend)
         .pipe(catchError(this.errorHandler));
        // console.log(this.currUser);
+       sessionStorage.setItem("contacts", JSON.stringify(this.currUser.contacts));
+       //console.log("stored contacts: " + sessionStorage.getItem('contacts'));
+
+       sessionStorage.setItem("notes", JSON.stringify(this.currUser.notes));
 
     
     return this.currUser;

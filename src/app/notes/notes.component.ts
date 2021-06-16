@@ -19,7 +19,10 @@ export class NotesComponent implements OnInit {
                 this.currUser = data;
                 this.notes = this.currUser.notes;
             },
-            (error) => this.errorMessage = error
+            (error) => {
+                this.notes = sessionStorage.getItem('notes');
+                this.errorMessage = error;
+            } 
         )
     }
 

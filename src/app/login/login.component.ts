@@ -60,6 +60,11 @@ export class LoginComponent implements OnInit {
             sessionStorage.setItem('providerRateSigned', this.currentUser.provider[0].rate_signed);
             sessionStorage.setItem('providerPrimary', this.currentUser.provider[0].primary);
 
+            sessionStorage.setItem("contacts", JSON.stringify(this.currentUser.contacts));
+            //console.log("stored contacts: " + sessionStorage.getItem('contacts'));
+
+            sessionStorage.setItem("notes", JSON.stringify(this.currentUser.notes));
+
             // console.log("stored session login_id = " + sessionStorage.getItem('login_id'));
             // console.log("stored session providerName = " + sessionStorage.getItem('providerName'));
 
