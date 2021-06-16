@@ -10,19 +10,19 @@
     <form  #loginForm="ngForm">
         <br>
         <p>
-            <label> Name:</label> {{currentUser.provider[0].name}}
+            <label> Name:</label> {{this.currentProvider.name}}
         </p>
         <p>
-            <label> Address Line1:</label> {{currentUser.provider[0].address_line1}}
+            <label> Address Line1:</label> {{this.currentProvider.address_line1}}
         </p>
         <p>
-            <label> Address Line2:</label> {{currentUser.provider[0].address_line2}}
+            <label> Address Line2:</label> {{this.currentProvider.address_line2}}
         </p>
         <p>
-            <label> Address Line3:</label> {{currentUser.provider[0].address_line3}}
+            <label> Address Line3:</label> {{this.currentProvider.address_line3}}
         </p>
         <p>
-            <label> Country:</label> {{currentUser.provider[0].country}}
+            <label> Country:</label> {{this.currentProvider.country}}
         </p>
             <!-- <input type="text" name='country' ngModel> 
             <select formControlName="name">
@@ -35,38 +35,38 @@
 
         
         <p>
-            <label> City:</label> {{currentUser.provider[0].city}}
+            <label> City:</label> {{this.currentProvider.city}}
         </p>
         <p>
-            <label> State:</label> {{currentUser.provider[0].state}}
+            <label> State:</label> {{this.currentProvider.state}}
         </p>
         <p>
-            <label> Zip:</label> {{currentUser.provider[0].zip_code}}
+            <label> Zip:</label> {{this.currentProvider.zip_code}}
         </p>
         <p>
-            <label> Phone:</label> {{currentUser.provider[0].phone}} 
-            <label class="label2"> Ext:</label> {{currentUser.provider[0].phone_ext}}
+            <label> Phone:</label> {{this.currentProvider.phone}} 
+            <label class="label2"> Ext:</label> {{this.currentProvider.phone_ext}}
         </p>
         <p>
-            <label> Fax:</label> {{currentUser.provider[0].fax}}
+            <label> Fax:</label> {{this.currentProvider.fax}}
         </p>
         <p>
-            <label> Toll Free:</label> {{currentUser.provider[0].toll_free}}
+            <label> Toll Free:</label> {{this.currentProvider.toll_free}}
         </p>
         <p>
-            <label> Email:</label> {{currentUser.provider[0].email}}
+            <label> Email:</label> {{this.currentProvider.email}}
         </p>
         <p>
-            <label> Primary Contact:</label> {{currentUser.provider[0].primary_contact}}
+            <label> Primary Contact:</label> {{this.currentProvider.primary_contact}}
         </p>
         <p>
-            <label> TimeZone:</label> {{currentUser.provider[0].time_zone}}
+            <label> TimeZone:</label> {{this.currentProvider.time_zone}}
         </p>
         <p>
-            <label> Opening Time:</label> {{currentUser.provider[0].hour_start}}
+            <label> Opening Time:</label> {{this.currentProvider.hour_start}}
         </p>
         <p>
-            <label> Closing Time:</label> {{currentUser.provider[0].hour_end}}
+            <label> Closing Time:</label> {{this.currentProvider.hour_end}}
         </p>
         <p>
             <label class="label2"> Active</label> <input type="checkbox" onclick="return false;" name='isActive' [(ngModel)]="prov_is_active">

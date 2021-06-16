@@ -16,9 +16,9 @@ export class CanActivateClassGuardGuard implements CanActivate {
       
       if(this.authService.isUserLoggedIn()) return true;
       else { 
-        alert('You need Log In to view this page');
-        this.router.navigate(["login"])
-        return false;
+            alert('You need Log In to view this page');
+            this.router.navigate(["login"]);
+            return false;
        }
       
   }

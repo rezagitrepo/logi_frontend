@@ -37,6 +37,36 @@ export class LoginComponent implements OnInit {
             console.log("data returned: " + data);
             this.currentUser = data;
 
+            //store stuff here
+            sessionStorage.setItem('login_id', this.currentUser.login_id);
+            sessionStorage.setItem('providerName', this.currentUser.provider[0].name);
+            sessionStorage.setItem('providerAdd1', this.currentUser.provider[0].address_line1);
+            sessionStorage.setItem('providerAdd2', this.currentUser.provider[0].address_line2);
+            sessionStorage.setItem('providerAdd3', this.currentUser.provider[0].address_line3);
+            sessionStorage.setItem('providerCountry', this.currentUser.provider[0].country);
+            sessionStorage.setItem('providerCity', this.currentUser.provider[0].city);
+            sessionStorage.setItem('providerState', this.currentUser.provider[0].state);
+            sessionStorage.setItem('providerZipcode', this.currentUser.provider[0].zip_code);
+            sessionStorage.setItem('providerPhone', this.currentUser.provider[0].phone);
+            sessionStorage.setItem('providerPhoneExt', this.currentUser.provider[0].phone_ext);
+            sessionStorage.setItem('providerFax', this.currentUser.provider[0].fax);
+            sessionStorage.setItem('providerTollFree', this.currentUser.provider[0].toll_free);
+            sessionStorage.setItem('providerEmail', this.currentUser.provider[0].email);
+            sessionStorage.setItem('providerPrimaryContact', this.currentUser.provider[0].primary_contact);
+            sessionStorage.setItem('providerTimeZone', this.currentUser.provider[0].time_zone);
+            sessionStorage.setItem('providerHourStart', this.currentUser.provider[0].hour_start);
+            sessionStorage.setItem('providerHourEnd', this.currentUser.provider[0].hour_end);
+            sessionStorage.setItem('providerActive', this.currentUser.provider[0].active);
+            sessionStorage.setItem('providerRateSigned', this.currentUser.provider[0].rate_signed);
+            sessionStorage.setItem('providerPrimary', this.currentUser.provider[0].primary);
+
+            // console.log("stored session login_id = " + sessionStorage.getItem('login_id'));
+            // console.log("stored session providerName = " + sessionStorage.getItem('providerName'));
+
+
+
+
+
             console.log("CurrUser.email = " + this.currentUser.email);
             console.log("CurrUser.login_id = " + this.currentUser.login_id);
             console.log("CurrUser.contacts = " + this.currentUser.contacts);

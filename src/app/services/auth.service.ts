@@ -6,22 +6,25 @@ import { catchError } from 'rxjs/operators';
 import { Login } from '../LoginModel';
 import UserModel from '../UserModel';
 import { IUser, IContact, INote, IProvider } from '../interfaces/IUser';
+import { ThrowStmt } from '@angular/compiler';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+    private storedUser: any;
   private baseUrl:string = "http://localhost:3000/api/users";
   private loginUrl:string = "http://localhost:3000/api/users/login";
   private lostpassUrl: string = "http://localhost:3000/api/users/lostpass";
   private currUser: any;
   private errorMessage: any;
-  private isloggedIn: boolean;
+  private isloggedIn: boolean = false;
   private userName:string | undefined;
+  private pass: string | undefined;
+  //private id = JSON.parse(localStorage.getItem('id') || '');
 
   constructor(private http: HttpClient) {
-      this.isloggedIn=false;
   }
 
   submitRecoverPass(lostpass_credentials: any): Observable<IUser[]> {
@@ -33,12 +36,21 @@ export class AuthService {
 
   login(login_cred: Login): Observable<IUser[]> {
       let dataToSend = login_cred;
+      this.userName = login_cred.login_id;
+      this.pass = login_cred.hashed_password;
     //   console.log("request sent from Angular: " + JSON.stringify(dataToSend));
         this.currUser = this.http.post<IUser[]>(this.loginUrl, dataToSend)
         .pipe(catchError(this.errorHandler));
         console.log(this.currUser);
+        if(this.currUser!==null) {
+            this.isloggedIn = true;
+            //this.id = localStorage.setItem('id', this.currUser._id);
+            //this.isloggedIn = localStorage.setItem('isloggedIn','true');
+        }
+        console.log("this.isloggedIn: " + this.isloggedIn);
 
-    if(this.currUser!==null) {this.isloggedIn=true}
+        
+
     //submit login post request
     return this.currUser;
 
@@ -48,8 +60,22 @@ export class AuthService {
   }
 
   getCurrentUser(): Observable<IUser[]> {
-      return this.currUser;
-  }
+//     let dataToSend = {
+//         login_id: this.userName,
+//         hashed_password: this.pass
+//     }
+//   //   console.log("request sent from Angular: " + JSON.stringify(dataToSend));
+//       this.currUser = this.http.get<IUser[]>("http://localhost:3000/api/users/" + this.id)
+//       .pipe(catchError(this.errorHandler));
+//       console.log(this.currUser);
+//       if(this.currUser!==null) {
+//           this.isloggedIn = localStorage.setItem('isloggedIn','true');
+//       }
+//       console.log("this.isloggedIn: " + this.isloggedIn);
+
+        //submit login post request
+        return this.currUser;
+    }
 
   updateUser(updatedUser: any): Observable<IUser[]> {
       let dataToSend = updatedUser;
@@ -64,11 +90,13 @@ export class AuthService {
   }
 
   logout() {
-        this.isloggedIn=false;
+    this.isloggedIn = false;
+    console.log("this.isloggedIn: " + this.isloggedIn);
         return of(this.isloggedIn);
   }
 
   isUserLoggedIn(): boolean {
+    //console.log("Returning isUserLoggedIn(): " + JSON.parse(localStorage.getItem('isloggedIn') || this.isloggedIn));
       return this.isloggedIn;
   }
 
